@@ -55,11 +55,11 @@
                 {
                     "atomType": "Code",
                     "name": "Code",
-                    "x": 536,
-                    "y": 109,
+                    "x": 514,
+                    "y": 105,
                     "uniqueID": 223036,
                     "ioValues": [],
-                    "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1){\n  console.log(Input1.measureBoundingBox()[0]);\n  return Input1        //return must be geometry;\n}\n\nreturn main(Input1)"
+                    "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1){\n  const height = Input1.measureBoundingBox()[1][2] - Input1.measureBoundingBox()[0][2];\n  console.log(height);\n  return height;\n}\n\nreturn main(Input1)"
                 },
                 {
                     "atomType": "Output",
@@ -76,6 +76,13 @@
                     "ap2Primary": true,
                     "ap1ID": 768911,
                     "ap2ID": 234644
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "Input1",
+                    "ap2Primary": false,
+                    "ap1ID": 234644,
+                    "ap2ID": 223036
                 }
             ],
             "fileTypeVersion": 1

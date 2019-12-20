@@ -6,9 +6,61 @@
             "x": 0,
             "y": 0,
             "uniqueID": 936353,
-            "ioValues": [],
+            "ioValues": [
+                {
+                    "name": "Geometry",
+                    "ioValue": 10
+                }
+            ],
             "topLevel": true,
             "allAtoms": [
+                {
+                    "atomType": "Input",
+                    "name": "Geometry",
+                    "x": 30,
+                    "y": 143,
+                    "uniqueID": 947142,
+                    "ioValues": []
+                },
+                {
+                    "atomType": "Rectangle",
+                    "name": "Rectangle",
+                    "x": 174,
+                    "y": 227,
+                    "uniqueID": 768911,
+                    "ioValues": [
+                        {
+                            "name": "x length",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "y length",
+                            "ioValue": 10
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 347,
+                    "y": 181,
+                    "uniqueID": 234644,
+                    "ioValues": [
+                        {
+                            "name": "height",
+                            "ioValue": 10
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Code",
+                    "name": "Code",
+                    "x": 536,
+                    "y": 109,
+                    "uniqueID": 223036,
+                    "ioValues": [],
+                    "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1){\n  console.log(Input1.measureBoundingBox()[0]);\n  return Input1        //return must be geometry;\n}\n\nreturn main(Input1)"
+                },
                 {
                     "atomType": "Output",
                     "name": "Output",
@@ -17,7 +69,15 @@
                     "ioValues": []
                 }
             ],
-            "allConnectors": [],
+            "allConnectors": [
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 768911,
+                    "ap2ID": 234644
+                }
+            ],
             "fileTypeVersion": 1
         }
     ],

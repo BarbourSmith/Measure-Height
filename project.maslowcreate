@@ -23,42 +23,17 @@
                     "ioValues": []
                 },
                 {
-                    "atomType": "Rectangle",
-                    "name": "Rectangle",
-                    "x": 174,
-                    "y": 227,
-                    "uniqueID": 768911,
-                    "ioValues": [
-                        {
-                            "name": "x length",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "y length",
-                            "ioValue": 10
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Extrude",
-                    "name": "Extrude",
-                    "x": 347,
-                    "y": 181,
-                    "uniqueID": 234644,
-                    "ioValues": [
-                        {
-                            "name": "height",
-                            "ioValue": 10
-                        }
-                    ]
-                },
-                {
                     "atomType": "Code",
                     "name": "Code",
-                    "x": 514,
-                    "y": 105,
+                    "x": 701,
+                    "y": 166,
                     "uniqueID": 223036,
-                    "ioValues": [],
+                    "ioValues": [
+                        {
+                            "name": "Input1",
+                            "ioValue": 10
+                        }
+                    ],
                     "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1){\n  const height = Input1.measureBoundingBox()[1][2] - Input1.measureBoundingBox()[0][2];\n  console.log(height);\n  return height;\n}\n\nreturn main(Input1)"
                 },
                 {
@@ -71,17 +46,10 @@
             ],
             "allConnectors": [
                 {
-                    "ap1Name": "geometry",
-                    "ap2Name": "geometry",
-                    "ap2Primary": true,
-                    "ap1ID": 768911,
-                    "ap2ID": 234644
-                },
-                {
-                    "ap1Name": "geometry",
+                    "ap1Name": "number or geometry",
                     "ap2Name": "Input1",
                     "ap2Primary": false,
-                    "ap1ID": 234644,
+                    "ap1ID": 947142,
                     "ap2ID": 223036
                 }
             ],
